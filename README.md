@@ -3,9 +3,13 @@
 A minimal boilerplate mock server in Sinatra. To install and run the server, enter the terminal and run the following commands:
 
 ```git clone https://github.com/justjoeyuk/Snippet.git```
+
 ```cd Snippet```
+
 ```gem install sinatra```
+
 ```ruby Server.rb```
+
 
 Voila! Your very own mock server with responses that can easily execute snippets. You are free to customise the application however you like, just know that the code to run the snippets is in "/Utils/ResponseUtility.rb". Have fun!
 
