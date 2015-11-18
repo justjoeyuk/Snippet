@@ -7,13 +7,23 @@ require './Utils/ResponseUtility.rb'
 
 before do
   request.body.rewind
-  @request_payload = JSON.parse request.body.read
+
+  begin
+    @request_payload = JSON.parse request.body.read
+  rescue JSON::ParserError => e
+    @request_payload = nil
+  end
 end
 
 
 ## MOCK LOGIN ##
 
 post '/your-api/login' do
+  if @request_payload == nil then
+    status 400
+    return body ''
+  end
+
   email = @request_payload["email"]
   password = @request_payload["password"]
 
