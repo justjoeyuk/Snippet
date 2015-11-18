@@ -16,7 +16,7 @@ Voila! Your very own mock server with responses that can easily execute snippets
 
 ## The Problem
 
-Mobile Developers sometimes need to make servers to mock responses from the API they're interacting with. The most common use for this seems to be for **UI Tests** and **Unit Tests**. There can be a problem when you're testing access tokens and other dynamic data that's returned from the API as you depend upon this data changing in your application.
+Developers sometimes need to make servers to mock responses from the API they're interacting with. The most common use for this seems to be for **UI Tests** and **Unit Tests**. There can be a problem when you're testing access tokens and other dynamic data that's returned from the API as you depend upon this data changing in your application.
 
 For example, you are writing an application that caches the users data when they log in. This data includes an AccessToken which has an expiry date and an identifier. When the user logs in again, you want to refresh the token. If you want to test that this works with a mock server, you're in trouble because the data isn't dynamic.
 
